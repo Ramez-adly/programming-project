@@ -65,3 +65,20 @@ def morse_it2(string, MORSECODE2):
         result += " "  # Add space between words
     return result.strip()  # Remove  spaces
 
+# Function for user interaction
+def get_user_input():
+    # Ask the user for their choice
+    choice = input("Press 'm' for English to Morse code or 'e' for Morse code to English: ").lower()
+
+    # Check the user's choice
+    if choice == "m":
+        string = input("Enter text: ")
+        print(morse_it(string, MORSECODE))  # Call the function to convert English to Morse code
+    elif choice == "e":
+        string = input("Enter Morse code (use '.' for dot and '-' for dash, space between letters and '/' between words): ")
+        print(morse_it2(string, MORSECODE2))  # Call the function to convert Morse code to English
+    else:
+        print("Choose a correct letter.")  # Print an error message for an incorrect choice
+
+# Get user input
+get_user_input()
