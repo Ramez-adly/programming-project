@@ -51,7 +51,7 @@ def morse_it2(string, MORSECODE2):
     # - str: The converted English text.
 
     if not string:
-        raise MorseCodeError("Input cannot be empty. Please enter Morse code for conversion.")
+        raise MorseCodeError("Input cannot be empty. Please enter Morse code for conversion.") # if no string has been input 
     
     morse_words = string.split('/')  # Split Morse code by '/'
     result = ""
@@ -81,4 +81,4 @@ def get_user_input():
         print("Choose a correct letter.")  # Print an error message for an incorrect choice
 
 # Get user input
-get_user_input()
+get_user_input()       #calls the function
